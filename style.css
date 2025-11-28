@@ -25,3 +25,63 @@ animation:  rotateForever 2s infinite;
 font-size: 3rem;
 font-family: 'Playfair Display', sans-serif;
 }
+
+
+/*for logo on top left*/
+.pageLogo{
+  position: fixed;
+  top: 10px; 
+  left: 10px; 
+  z-index: 1000;
+}
+
+.pageLogo > img{
+  width: 60px;
+}
+
+/*for content on nav bar top right*/
+.NavBarComponents{
+  position: fixed;
+  top: 10px; 
+  right: 10px; 
+  z-index: 1000;
+}
+
+/*Pic- Car of the day*/
+
+.CarOfTheDay{
+  position: relative;
+  z-index: 5;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.CarOfTheDay > img{
+  margin: auto;
+  height: 200px;
+}
+
+/*TIMER*/
+.timer-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#countdown {
+    font-size: 3em;
+    font-weight: bold;
+    color: #F0B6D5;
+}
+
+#countdown span {
+    display: inline-block;
+    min-width: 60px; 
+}
+
+
