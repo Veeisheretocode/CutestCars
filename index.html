@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/2a604f2468.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Cutest Cars</title>
   </head>
   <body>
@@ -11,27 +15,48 @@
       <h1>Cutest Ca<img src="animal@1x-1.0s-200px-200px.png" alt="disc" />s</h1>
     </div>
 
-    <nav>
-      <div class="pageLogo">
-        <img src="cat-meme-meme.gif" alt="OOIIAAII" />
-      </div>
+    <!--NAVBAR-->
+    <nav class="navbar">
+      <div class="container">
+        <div class="pageLogo">
+          <img src="cat-meme-meme.gif" alt="OOIIAAII" />
+        </div>
 
-      <div class="NavBarComponents">
-        toggle icon here
+        <div class="NavBarComponents">
+          <button>Meow</button>
+        </div>
       </div>
     </nav>
 
-<div class="CarOfTheDay">
-  <img id="dailyImage" alt="Image Of The Day">
-</div>
-
-
-<div class="timer-container">
-        <h1>Time Until Tomorrow's Reset:</h1>
-        <div id="countdown">
-            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+    <!--top sec-->
+    <div class="topHalf">
+      <!--car of the day-->
+      <div class="CarOfTheDay">
+        <img id="dailyImage" alt="Image Of The Day" />
         </div>
-</div>
+        <!--music part-->
+        <div class="musicContainer">
+          <div class="musicPlayer">
+            <img src="thumbnail.webp" alt="Meowl" class="Meowl" />
+            <h2>Meowl's Playlist</h2>
+            <p>Artist : Meowl</p>
+            <audio controls>
+              <source src="meowl.mp3" type="audio/mp3" />
+            </audio>
+          </div>
+      </div>
+    </div>
+
+    <!--COUNTER-->
+    <div class="timer-container">
+      <h2>Time Until Tomorrow's Reset:</h2>
+      <div id="countdown">
+        <span id="hours">00</span>:<span id="minutes">00</span>:<span
+          id="seconds"
+          >00</span
+        >
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

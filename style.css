@@ -1,3 +1,19 @@
+/*full background css*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #c1f4c5;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  border-style: dotted;
+  border-width: thick;
+  border-color: #65c18c;
+}
+
 .loadingScreen {
   position: absolute;
   z-index: 5;
@@ -10,78 +26,267 @@
 }
 
 .loadingScreen > h1 img {
-width: 45px;
-animation:  rotateForever 2s infinite;
+  width: 45px;
+  animation: rotateForever 2s infinite;
 }
 
 /*let's rotate the car alrighty*/
 @keyframes rotateForever {
   from {
-   transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 .loadingScreen > h1 {
-font-size: 3rem;
-font-family: 'Playfair Display', sans-serif;
+  font-size: 3rem;
+  font-family: "Playfair Display", sans-serif;
 }
 
+/*navbar style*/
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
 /*for logo on top left*/
-.pageLogo{
+.pageLogo {
   position: fixed;
-  top: 10px; 
-  left: 10px; 
+  top: 15px;
+  left: 15px;
   z-index: 1000;
 }
 
-.pageLogo > img{
+.pageLogo > img {
   width: 60px;
 }
 
 /*for content on nav bar top right*/
-.NavBarComponents{
+.NavBarComponents {
   position: fixed;
-  top: 10px; 
-  right: 10px; 
+  top: 15px;
+  right: 15px;
   z-index: 1000;
+}
+
+/*top half of screen*/
+.topHalf{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
 }
 
 /*Pic- Car of the day*/
 
-.CarOfTheDay{
+.CarOfTheDay {
   position: relative;
   z-index: 5;
-  background-color: white;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  height: 500px;
+  height: auto;
+  width: 48%;
+  margin-right: 5px;
+  min-height: 300px;
+  padding: 20px;
+  border: 2px solid black;
+  box-sizing: border-box;
+
 }
 
-.CarOfTheDay > img{
-  margin: auto;
-  height: 200px;
+.CarOfTheDay > img {
+  margin: 0 auto;
+  height: auto;
+  max-height: 240px;
+  max-width: 100%;
+  object-fit: contain;
+
+}
+
+.CarOfTheDay:hover {
+  transform: scale(1.05);
+}
+
+
+/**MUSIC PLAYER**/
+
+
+.musicContainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  margin-left: 5px;
+  min-height: 300px;
+  height: auto;
+  width: 48%;
+  box-sizing: border-box;
+
+  overflow: visible;
+  padding: 10px;
+
+}
+.musicPlayer{
+  background: #FF7BA9;
+  padding: 20px 24px 32px;
+  text-align: center;
+  margin: 0;
+  max-width: 360px;
+  min-height: 420px; 
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.Meowl{
+  width: 200px;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+  margin: 0 auto;
+}
+.musicPlayer > h1{
+ font-size: 20px;
+ font-weight: 400;
+ color: #333;
+ margin-top: 20px;
+}
+.musicPlayer > p{
+ font-size: 14px;
+ color: #333;
+}
+.musicPlayer audio,
+.musicPlayer .audio-controls,
+.musicPlayer .player-ui {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 6px;
+}
+.musicPlayer p,
+.musicPlayer .track-title,
+.musicPlayer .metadata {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /*TIMER*/
 .timer-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  position: static;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 50%;
+  margin: 10px auto;
+
+  max-width: 560px;
+  margin: 0 auto;
+  z-index: 10;
 }
 
 #countdown {
-    font-size: 3em;
-    font-weight: bold;
-    color: #F0B6D5;
+  font-size: 3em;
+  font-weight: bold;
+  color: #f0b6d5;
 }
 
 #countdown span {
-    display: inline-block;
-    min-width: 60px; 
+  display: inline-block;
+  min-width: 60px;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+/* responsiveness */
+@media (max-width: 768px) {
+  .pageLogo > img {
+    width: 40px;
+  }
+  .NavBarComponents {
+    top: 5px;
+    right: 5px;
+  }
+  .topHalf{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .CarOfTheDay {
+    height: 300px;
+    width: 100%;
+    min-height: auto;
+    padding: 10px;
+  }
+  .CarOfTheDay > img {
+    height: 150px;
+  }
+  .musicContainer{
+    height: 300px;
+    width: 100%;
+    min-height: auto;
+    padding: 10px;
+  }
+  .musicPlayer{
+    max-width: 520px;
+    width: 100%;
+    padding: 15px;
+    height: auto;
+  }
+  .Meowl{
+    width: 140px;
+  }
+  .loadingScreen > h1 {
+    font-size: 2rem;
+  }
+  .timer-container{
+    width: 100%;
+    max-width: none;
+    height: auto;
+    padding: 10px;
+    margin: 6px 0;
+  }
+  .timer-container > h1 {
+    font-size: 1rem;
+  }
+  #countdown {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {   
+    flex-direction: column;
+    gap: 8px;
+  }
+}
