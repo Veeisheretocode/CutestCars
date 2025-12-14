@@ -11,6 +11,8 @@
     <title>Cutest Cars</title>
   </head>
   <body>
+    <audio src="" id="audio"></audio>
+
     <div class="loadingScreen">
       <h1>Cutest C<img src="animal@1x-1.0s-200px-200px.png" alt="disc" />rs</h1>
     </div>
@@ -33,17 +35,31 @@
       <!--car of the day-->
       <div class="CarOfTheDay">
         <img id="dailyImage" alt="Image Of The Day" />
-        </div>
-        <!--music part-->
-        <div class="musicContainer">
-          <div class="musicPlayer">
-            <img src="thumbnail.webp" alt="Meowl" class="Meowl" />
-            <h2>Meowl's Playlist</h2>
-            <p>Artist : Meowl</p>
-            <audio controls>
-              <source src="meowl.mp3" type="audio/mp3" />
-            </audio>
+      </div>
+      <!--music part-->
+      <div class="musicContainer">
+        <div class="musicPlayer">
+          <h2 class="music-name">Meowl Song</h2>
+          <p class="artist-name">Meowl</p>
+          <div class="disk"></div>
+          <div class="song-slider">
+            <input type="range" value="0" class="seek-bar" />
+            <span class="current-time">00:00</span>
+            <span class="song-duration">00:00</span>
           </div>
+          <div class="controls">
+            <button class="btn backward-btn">
+              <img src="images/pre.png" alt="" />
+            </button>
+            <button class="play-btn pause">
+              <span></span>
+              <span></span>
+            </button>
+            <button class="btn forward-btn">
+              <img src="images/nxt.png" alt="" />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -59,5 +75,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="musicData.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

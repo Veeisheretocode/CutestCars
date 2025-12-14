@@ -106,3 +106,5 @@ function scheduleMidnightUpdate() {
 //Run on page load
 setImageForToday();
 scheduleMidnightUpdate();
+
+
